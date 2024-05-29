@@ -1,9 +1,9 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_management/app/constans/app_constants.dart';
-import 'package:project_management/app/shared_components/list_profil_image.dart';
-import 'package:project_management/app/utils/helpers/app_helpers.dart';
+import 'package:slaega_fb_management/app/constans/app_constants.dart';
+import 'package:slaega_fb_management/app/shared_components/list_profil_image.dart';
+import 'package:slaega_fb_management/app/utils/helpers/app_helpers.dart';
 
 class TaskCardData {
   final String title;
@@ -58,8 +58,7 @@ class TaskCard extends StatelessWidget {
                 title: data.title,
                 subtitle: (data.dueDay < 0)
                     ? "Late in ${data.dueDay * -1} days"
-                    : "Due in " +
-                        ((data.dueDay > 1) ? "${data.dueDay} days" : "today"),
+                    : "Due in ${(data.dueDay > 1) ? "${data.dueDay} days" : "today"}",
                 onPressedMore: onPressedMore,
               ),
             ),
@@ -70,8 +69,7 @@ class TaskCard extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      elevation: 0,
-                      primary: data.type.getColor(),
+                      elevation: 0, backgroundColor: data.type.getColor(),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
@@ -210,7 +208,7 @@ class _IconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       style: ElevatedButton.styleFrom(
-        primary: Colors.transparent,
+        backgroundColor: Colors.transparent,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(kBorderRadius),
         ),

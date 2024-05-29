@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hr_management/common/app_colors.dart';
-import 'package:flutter_hr_management/common/app_responsive.dart';
-import 'package:flutter_hr_management/controllers/menu_controller.dart';
+import 'package:slaega_bussiness/common/app_colors.dart';
+import 'package:slaega_bussiness/common/app_responsive.dart';
+import 'package:slaega_bussiness/controllers/menu_controller.dart';
 import 'package:provider/provider.dart';
 
 class HeaderWidget extends StatefulWidget {
@@ -22,10 +22,10 @@ class _HeaderWidgetState extends State<HeaderWidget> {
                 Icons.menu,
                 color: AppColor.black,
               ),
-              onPressed: Provider.of<MenuController>(context, listen: false)
+              onPressed: Provider.of<AppMenuController>(context, listen: false)
                   .controlMenu,
             ),
-          Text(
+          const SelectableText(
             "Dashboard",
             style: TextStyle(
               fontSize: 30,

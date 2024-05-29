@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hr_management/common/app_colors.dart';
+import 'package:slaega_bussiness/common/app_colors.dart';
 
 class SideBar extends StatefulWidget {
   @override
@@ -19,7 +19,7 @@ class _SideBarState extends State<SideBar> {
             Container(
               margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
               child: Text(
-                "MATRIX HR",
+                "Buss HR",
                 style: TextStyle(
                   color: AppColor.yellow,
                   fontSize: 25,
@@ -57,8 +57,9 @@ class _SideBarState extends State<SideBar> {
               icon: "assets/menu_settings.png",
               press: () {},
             ),
-            Spacer(),
-            Image.asset("assets/sidebar_image.png")
+            const Spacer(),
+            const Image(image: AssetImage("assets/sidebar_image.png",package: 'slaega_bussiness'),)
+           
           ],
         ),
       ),
@@ -70,15 +71,14 @@ class DrawerListTile extends StatelessWidget {
   final String title, icon;
   final VoidCallback press;
 
-  const DrawerListTile({Key key, this.title, this.icon, this.press})
-      : super(key: key);
+  const DrawerListTile({super.key, required this.title,required this.icon,required this.press});
   @override
   Widget build(BuildContext context) {
     return ListTile(
       onTap: press,
       horizontalTitleGap: 0.0,
-      leading: Image.asset(
-        icon,
+      leading: Image(
+        image: AssetImage(icon,package: 'slaega_bussiness'),
         color: AppColor.white,
         height: 16,
       ),

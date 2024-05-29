@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_management/app/constans/app_constants.dart';
+import 'package:slaega_fb_management/app/constans/app_constants.dart';
 
 /// all custom application theme
 class AppTheme {
@@ -10,11 +10,10 @@ class AppTheme {
         primaryColor: const Color.fromRGBO(128, 109, 255, 1),
         primaryColorLight: const Color.fromRGBO(159, 84, 252, 1),
         brightness: Brightness.dark,
-        primaryColorBrightness: Brightness.dark,
         primarySwatch: Colors.deepPurple,
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-          primary: const Color.fromRGBO(128, 109, 255, 1),
+          backgroundColor: const Color.fromRGBO(128, 109, 255, 1),
         ).merge(
           ButtonStyle(elevation: MaterialStateProperty.all(0)),
         )),

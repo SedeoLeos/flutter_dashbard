@@ -1,8 +1,8 @@
 
-import 'package:ecommerce_admin_tut/rounting/route_names.dart';
-import 'package:ecommerce_admin_tut/rounting/router.dart';
-import 'package:ecommerce_admin_tut/services/navigation_service.dart';
-import 'package:ecommerce_admin_tut/widgets/side_menu/side_menu.dart';
+import 'package:slaega_admin_ecommerce/rounting/route_names.dart';
+import 'package:slaega_admin_ecommerce/rounting/router.dart';
+import 'package:slaega_admin_ecommerce/services/navigation_service.dart';
+import 'package:slaega_admin_ecommerce/widgets/side_menu/side_menu.dart';
 import 'package:flutter/material.dart';
 
 import '../../locator.dart';
@@ -22,11 +22,11 @@ class LayoutTemplate extends StatelessWidget {
         child: ListView(
           children: [
             UserAccountsDrawerHeader(
-              accountEmail: Text("abc@gmail.com"),
-              accountName: Text("Santos Enoque"),
+              accountEmail: SelectableText("abc@gmail.com"),
+              accountName: SelectableText("Santos Enoque"),
             ),
             ListTile(
-              title: Text("Lessons"),
+              title: SelectableText("Lessons"),
               leading: Icon(Icons.book),
             )
           ],

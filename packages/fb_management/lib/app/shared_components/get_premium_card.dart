@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:project_management/app/constans/app_constants.dart';
+import 'package:slaega_fb_management/app/constans/app_constants.dart';
 
 class GetPremiumCard extends StatelessWidget {
   const GetPremiumCard({
@@ -34,6 +34,7 @@ class GetPremiumCard extends StatelessWidget {
                 alignment: Alignment.topRight,
                 child: SvgPicture.asset(
                   ImageVectorPath.wavyBus,
+                  package:'slaega_fb_management',
                   width: 180,
                   height: 180,
                   fit: BoxFit.contain,

@@ -26,7 +26,7 @@ class TopBar extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.only(left: 05.0, top: 0.5),
-                    child: Text("My Store"),
+                    child: SelectableText("My Store"),
                   ),
                 ],
               ),
@@ -45,7 +45,7 @@ class TopBar extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.only(left: 05.0, top: 0.0),
-                    child: Text("Wallet"),
+                    child: SelectableText("Wallet"),
                   ),
                 ],
               ),
@@ -64,7 +64,7 @@ class TopBar extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.only(left: 05.0, top: 0.0),
-                    child: Text("Share"),
+                    child: SelectableText("Share"),
                   ),
                 ],
               ),
@@ -83,7 +83,7 @@ class TopBar extends StatelessWidget {
                   ),
                   Container(
                     padding: EdgeInsets.only(left: 05.0, top: 0.0),
-                    child: Text("Logout"),
+                    child: SelectableText("Logout"),
                   ),
                 ],
               ),

@@ -1,8 +1,8 @@
-import 'package:ecommerce_admin_tut/widgets/cards/card_item.dart';
-import 'package:ecommerce_admin_tut/widgets/custom_text.dart';
-import 'package:ecommerce_admin_tut/widgets/page_header.dart';
-import 'package:ecommerce_admin_tut/widgets/charts/sales_chart.dart';
-import 'package:ecommerce_admin_tut/widgets/top_buyer.dart';
+import 'package:slaega_admin_ecommerce/widgets/cards/card_item.dart';
+import 'package:slaega_admin_ecommerce/widgets/custom_text.dart';
+import 'package:slaega_admin_ecommerce/widgets/page_header.dart';
+import 'package:slaega_admin_ecommerce/widgets/charts/sales_chart.dart';
+import 'package:slaega_admin_ecommerce/widgets/top_buyer.dart';
 import 'package:flutter/material.dart';
 
 class HomePageTablet extends StatelessWidget {
@@ -79,7 +79,7 @@ class HomePageTablet extends StatelessWidget {
                     ]),
                 child: Column(
                   children: [
-                    CustomText(text: 'Top Buyers', size: 30,),
+                    CustomSelectableText(text: 'Top Buyers', size: 30,),
                     TopBuyerWidget(),
                     TopBuyerWidget(),
                     TopBuyerWidget(),

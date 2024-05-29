@@ -1,4 +1,4 @@
-# admin_panel_responsive_flutter
+# slaega_dashboard_panel
 
 A new Flutter application.
 

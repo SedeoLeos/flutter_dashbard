@@ -1,5 +1,5 @@
-import 'package:ecommerce_admin_tut/provider/app_provider.dart';
-import 'package:ecommerce_admin_tut/provider/tables.dart';
+import 'package:slaega_admin_ecommerce/provider/app_provider.dart';
+import 'package:slaega_admin_ecommerce/provider/tables.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

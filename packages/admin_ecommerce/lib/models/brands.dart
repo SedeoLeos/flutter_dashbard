@@ -4,15 +4,17 @@ class BrandModel {
   static const ID = "id";
   static const BRAND = "brand";
 
-  String _id;
-  String _brand;
+  late String _id;
+  late String _brand;
 
-//  getters
+  // Getters
   String get brand => _brand;
   String get id => _id;
 
+  // Constructor to create a BrandModel from a Firestore snapshot
   BrandModel.fromSnapshot(DocumentSnapshot snapshot) {
-    _brand = snapshot.data()[BRAND];
-    _id = snapshot.data()[ID];
+    final data = snapshot.data() as Map<String, dynamic>;
+    _brand = data[BRAND];
+    _id = data[ID];
   }
 }

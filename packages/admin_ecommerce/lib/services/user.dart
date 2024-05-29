@@ -1,15 +1,15 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecommerce_admin_tut/helpers/costants.dart';
-import 'package:ecommerce_admin_tut/models/user.dart';
+import 'package:slaega_admin_ecommerce/helpers/costants.dart';
+import 'package:slaega_admin_ecommerce/models/user.dart';
 
 class UserServices {
   String adminsCollection = "admins";
   String usersCollection = "users";
 
   void createAdmin({
-    String id,
-    String name,
-    String email,
+    required String id,
+    required String name,
+    required String email,
   }) {
     firebaseFiretore.collection(adminsCollection).doc(id).set({
       "name": name,

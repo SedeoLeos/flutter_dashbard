@@ -43,7 +43,7 @@ class FooterPanel extends StatelessWidget {
   Widget SocialNetwork() => Container(
       margin: EdgeInsets.symmetric(vertical: 20),
       child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        BoldBlackText('Let\'s keep in touch!'),
+        BoldBlackSelectableText('Let\'s keep in touch!'),
         NormalGreyText(
             'Find us on any of these platforms, we respond 1-2 business days.'),
         SizedBox(height: 10),
@@ -76,7 +76,7 @@ class FooterPanel extends StatelessWidget {
 
   Widget UsefulLink() =>
       Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        NormalGreyText('USEFUL LINKS'),
+        NormalGreySelectableText('USEFUL LINKS'),
         TextButtons('About Us', Colors.grey[900]),
         TextButtons('Blog', Colors.grey[900]),
         TextButtons('Github', Colors.grey[900]),
@@ -85,7 +85,7 @@ class FooterPanel extends StatelessWidget {
   Widget OtherResources() => Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          NormalGreyText('OTHER RESOURCES'),
+          NormalGreySelectableText('OTHER RESOURCES'),
           TextButtons('MIT License', Colors.grey[900]),
           TextButtons('Terms & Conditions', Colors.grey[900]),
           TextButtons('Privacy Policy', Colors.grey[900]),

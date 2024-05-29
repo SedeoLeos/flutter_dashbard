@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hr_management/common/app_colors.dart';
-import 'package:flutter_hr_management/common/app_responsive.dart';
+import 'package:slaega_bussiness/common/app_colors.dart';
+import 'package:slaega_bussiness/common/app_responsive.dart';
 
 class RecruitmentDataWidget extends StatefulWidget {
+  const RecruitmentDataWidget({super.key});
+
   @override
   _RecruitmentDataWidgetState createState() => _RecruitmentDataWidgetState();
 }
@@ -13,7 +15,7 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
     return Container(
       decoration: BoxDecoration(
           color: AppColor.white, borderRadius: BorderRadius.circular(20)),
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Column(
         children: [
           Row(
@@ -31,7 +33,7 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
                 decoration: BoxDecoration(
                     color: AppColor.yellow,
                     borderRadius: BorderRadius.circular(100)),
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 20,
                 ),
@@ -43,7 +45,7 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
               )
             ],
           ),
-          Divider(
+          const Divider(
             thickness: 0.5,
             color: Colors.grey,
           ),
@@ -52,7 +54,7 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
             children: [
               /// Table Header
               TableRow(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   border: Border(
                       bottom: BorderSide(
                     color: Colors.grey,
@@ -104,11 +106,11 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
             ],
           ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 10),
-            child: Row(
+            margin: const EdgeInsets.symmetric(vertical: 10),
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Showing 4 out of 4 Results"),
+                SelectableText("Showing 4 out of 4 Results"),
                 Text(
                   "View All",
                   style: TextStyle(fontWeight: FontWeight.bold),
@@ -123,7 +125,7 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
 
   TableRow tableRow(context, {name, image, designation, status, color}) {
     return TableRow(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           border: Border(
             bottom: BorderSide(
               color: Colors.grey,
@@ -134,25 +136,26 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
         children: [
           //Full Name
           Container(
-            margin: EdgeInsets.symmetric(vertical: 15),
+            margin: const EdgeInsets.symmetric(vertical: 15),
             child: Row(
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(1000),
-                  child: Image.asset(
-                    image,
+                  child: Image(
+                    image: AssetImage(
+                    image,package: 'slaega_bussiness'),
                     width: 30,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
-                Text(name)
+                SelectableText(name)
               ],
             ),
           ),
           // Designation
-          if (!AppResponsive.isMobile(context)) Text(designation),
+          if (!AppResponsive.isMobile(context)) SelectableText(designation),
           //Status
           Row(
             children: [
@@ -164,16 +167,18 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
                 height: 10,
                 width: 10,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
-              Text(status),
+              SelectableText(status),
             ],
           ),
           // Menu icon
           if (!AppResponsive.isMobile(context))
-            Image.asset(
+            const Image(
+              image: AssetImage(
               "assets/more.png",
+              package: 'slaega_bussiness'),
               color: Colors.grey,
               height: 30,
             )
@@ -182,7 +187,7 @@ class _RecruitmentDataWidgetState extends State<RecruitmentDataWidget> {
 
   Widget tableHeader(text) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 15),
+      margin: const EdgeInsets.symmetric(vertical: 15),
       child: Text(
         text,
         style: TextStyle(fontWeight: FontWeight.bold, color: AppColor.black),

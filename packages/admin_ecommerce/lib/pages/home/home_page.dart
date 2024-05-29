@@ -1,7 +1,7 @@
-import 'package:ecommerce_admin_tut/pages/home/desktop.dart';
-import 'package:ecommerce_admin_tut/pages/home/mobile.dart';
-import 'package:ecommerce_admin_tut/pages/home/tablet.dart';
-import 'package:ecommerce_admin_tut/widgets/size_constraint.dart';
+import 'package:slaega_admin_ecommerce/pages/home/desktop.dart';
+import 'package:slaega_admin_ecommerce/pages/home/mobile.dart';
+import 'package:slaega_admin_ecommerce/pages/home/tablet.dart';
+import 'package:slaega_admin_ecommerce/widgets/size_constraint.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 

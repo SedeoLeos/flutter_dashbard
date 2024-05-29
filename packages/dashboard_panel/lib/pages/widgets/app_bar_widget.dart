@@ -1,11 +1,13 @@
-import 'package:admin_panel_responsive_flutter/constants.dart';
-import 'package:admin_panel_responsive_flutter/responsive_layout.dart';
+import 'package:slaega_dashboard_panel/constants.dart';
+import 'package:slaega_dashboard_panel/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
 List<String> _buttonNames = ["Overview", "Revenue", "Sales", "Control"];
 int _currentSelectedButton = 0;
 
 class AppBarWidget extends StatefulWidget {
+  const AppBarWidget({super.key});
+
   @override
   _AppBarWidgetState createState() => _AppBarWidgetState();
 }
@@ -19,9 +21,9 @@ class _AppBarWidgetState extends State<AppBarWidget> {
         children: [
           if (ResponsiveLayout.isComputer(context))
             Container(
-              margin: EdgeInsets.all(Constants.kPadding),
+              margin: const EdgeInsets.all(Constants.kPadding),
               height: double.infinity,
-              decoration: BoxDecoration(boxShadow: [
+              decoration: const BoxDecoration(boxShadow: [
                 BoxShadow(
                   color: Colors.black45,
                   offset: Offset(0, 0),
@@ -42,21 +44,20 @@ class _AppBarWidgetState extends State<AppBarWidget> {
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
-              icon: Icon(Icons.menu),
+              icon: const Icon(Icons.menu),
             ),
-          SizedBox(width: Constants.kPadding),
+          const SizedBox(width: Constants.kPadding),
           if (ResponsiveLayout.isComputer(context))
             OutlinedButton(
               onPressed: () {},
-              child: Padding(
-                padding: const EdgeInsets.all(Constants.kPadding / 2),
-                child: Text("Admin Panel"),
-              ),
               style: OutlinedButton.styleFrom(
-                  primary: Colors.white,
-                  side: BorderSide(color: Colors.white, width: 0.4)),
+                  foregroundColor: Colors.white, side: const BorderSide(color: Colors.white, width: 0.4)),
+              child: const Padding(
+                padding: EdgeInsets.all(Constants.kPadding / 2),
+                child: SelectableText("Admin Panel"),
+              ),
             ),
-          Spacer(),
+          const Spacer(),
           if (ResponsiveLayout.isComputer(context))
             ...List.generate(
               _buttonNames.length,
@@ -81,12 +82,12 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.all(Constants.kPadding / 2),
+                        margin: const EdgeInsets.all(Constants.kPadding / 2),
                         width: 60,
                         height: 2,
                         decoration: BoxDecoration(
                           gradient: _currentSelectedButton == index
-                              ? LinearGradient(
+                              ? const LinearGradient(
                                   colors: [
                                     Constants.red,
                                     Constants.orange,
@@ -109,15 +110,15 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                 children: [
                   Text(
                     _buttonNames[_currentSelectedButton],
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.all(Constants.kPadding / 2),
+                    margin: const EdgeInsets.all(Constants.kPadding / 2),
                     width: 60,
                     height: 2,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       gradient: LinearGradient(
                         colors: [
                           Constants.red,
@@ -129,12 +130,12 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                 ],
               ),
             ),
-          Spacer(),
+          const Spacer(),
           IconButton(
             color: Colors.white,
             iconSize: 30,
             onPressed: () {},
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           ),
           Stack(
             children: [
@@ -142,9 +143,9 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                 color: Colors.white,
                 iconSize: 30,
                 onPressed: () {},
-                icon: Icon(Icons.notifications_none_outlined),
+                icon: const Icon(Icons.notifications_none_outlined),
               ),
-              Positioned(
+              const Positioned(
                 right: 6,
                 top: 6,
                 child: CircleAvatar(
@@ -160,9 +161,9 @@ class _AppBarWidgetState extends State<AppBarWidget> {
           ),
           if (!ResponsiveLayout.isPhone(context))
             Container(
-              margin: EdgeInsets.all(Constants.kPadding),
+              margin: const EdgeInsets.all(Constants.kPadding),
               height: double.infinity,
-              decoration: BoxDecoration(boxShadow: [
+              decoration: const BoxDecoration(boxShadow: [
                 BoxShadow(
                   color: Colors.black45,
                   offset: Offset(0, 0),
@@ -170,7 +171,7 @@ class _AppBarWidgetState extends State<AppBarWidget> {
                   blurRadius: 10,
                 )
               ], shape: BoxShape.circle),
-              child: CircleAvatar(
+              child: const CircleAvatar(
                 backgroundColor: Constants.orange,
                 radius: 30,
                 backgroundImage: AssetImage(

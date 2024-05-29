@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/component/paymentListTile.dart';
-import 'package:responsive_dashboard/config/size_config.dart';
-import 'package:responsive_dashboard/data.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:slaega_employee_admin/component/paymentListTile.dart';
+import 'package:slaega_employee_admin/config/size_config.dart';
+import 'package:slaega_employee_admin/data.dart';
+import 'package:slaega_employee_admin/style/colors.dart';
+import 'package:slaega_employee_admin/style/style.dart';
 
 class PaymentDetailList extends StatelessWidget {
-  const PaymentDetailList({
-    Key key,
-  }) : super(key: key);
+  const PaymentDetailList({super.key, 
+   
+  }) ;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class PaymentDetailList extends StatelessWidget {
         decoration:
             BoxDecoration(borderRadius: BorderRadius.circular(30), boxShadow: [
           BoxShadow(
-            color: Colors.grey[400],
+            color: Colors.grey[400]!,
             blurRadius: 15.0,
             offset: const Offset(
               10.0,
@@ -28,12 +28,12 @@ class PaymentDetailList extends StatelessWidget {
             ),
           )
         ]),
-        child: Image.asset('assets/card.png'),
+        child: const Image(image:AssetImage('assets/card.png',package:'slaega_employee_admin')),
       ),
       SizedBox(
         height: SizeConfig.blockSizeVertical * 5,
       ),
-      Column(
+      const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PrimaryText(
@@ -53,15 +53,15 @@ class PaymentDetailList extends StatelessWidget {
         children: List.generate(
           recentActivities.length,
           (index) => PaymentListTile(
-              icon: recentActivities[index]["icon"],
-              label: recentActivities[index]["label"],
-              amount: recentActivities[index]["amount"]),
+              icon: recentActivities[index]["icon"]!,
+              label: recentActivities[index]["label"]!,
+              amount: recentActivities[index]["amount"]!),
         ),
       ),
       SizedBox(
         height: SizeConfig.blockSizeVertical * 5,
       ),
-      Column(
+      const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           PrimaryText(
@@ -81,9 +81,9 @@ class PaymentDetailList extends StatelessWidget {
         children: List.generate(
           upcomingPayments.length,
           (index) => PaymentListTile(
-              icon: upcomingPayments[index]["icon"],
-              label: upcomingPayments[index]["label"],
-              amount: upcomingPayments[index]["amount"]),
+              icon: upcomingPayments[index]["icon"]!,
+              label: upcomingPayments[index]["label"]!,
+              amount: upcomingPayments[index]["amount"]!),
         ),
       ),
     ]);

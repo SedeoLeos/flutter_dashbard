@@ -4,15 +4,16 @@ class CategoriesModel {
   static const ID = "id";
   static const CATEGORY = "category";
 
-  String _id;
-  String _category;
+  late String _id;
+  late String _category;
 
 //  getters
   String get category => _category;
   String get id => _id;
 
   CategoriesModel.fromSnapshot(DocumentSnapshot snapshot) {
-    _category = snapshot.data()[CATEGORY];
-    _id = snapshot.data()[ID];
+    final data = snapshot.data() as Map<String, dynamic>;
+    _category = data[CATEGORY];
+    _id = data[ID];
   }
 }

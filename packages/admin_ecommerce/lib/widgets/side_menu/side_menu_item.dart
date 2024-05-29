@@ -1,4 +1,4 @@
-import 'package:ecommerce_admin_tut/widgets/custom_text.dart';
+import 'package:slaega_admin_ecommerce/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class SideMenuItemDesktop extends StatelessWidget {
@@ -14,7 +14,7 @@ class SideMenuItemDesktop extends StatelessWidget {
       onTap: onTap,
       tileColor: active ? Colors.green.withOpacity(.3) : null,
       leading: Icon(icon, color: Colors.white),
-      title: CustomText(text: text, color: Colors.white, size: active ? 23 : 18, weight: active ? FontWeight.bold : FontWeight.w300,),
+      title: CustomSelectableText(text: text, color: Colors.white, size: active ? 23 : 18, weight: active ? FontWeight.bold : FontWeight.w300,),
     );
   }
 }

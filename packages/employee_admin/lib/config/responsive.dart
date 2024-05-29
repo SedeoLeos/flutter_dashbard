@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 
 class Responsive extends StatelessWidget {
   final Widget mobile;
-  final Widget tablet;
+  final Widget? tablet;
   final Widget desktop;
-  final Widget smallMobile;
+  final Widget? smallMobile;
 
-  const Responsive({
-    Key key,
-    @required this.mobile,
+  const Responsive({super.key, 
+   
+    required this.mobile,
     this.tablet,
-    @required this.desktop,
+    required this.desktop,
     this.smallMobile
-  }) : super(key: key);
+  }) ;
 
 // This size work fine on my design, maybe you need some customization depends on your design
 
@@ -30,19 +30,25 @@ class Responsive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    // If our width is more than 1200 then we consider it a desktop
+
+    // If our width is more than or equal to 1200, we consider it a desktop
     if (_size.width >= 1200) {
       return desktop;
     }
-    // If width it less then 1200 and more then 768 we consider it as tablet
-    else if (_size.width >= 768 && tablet != null) {
-      return tablet;
+    // If width is between 768 and 1200 (excluding 1200), we consider it a tablet
+    else if (_size.width >= 768 && _size.width < 1200 && tablet != null) {
+      return tablet!;
     }
-    // Or less then that we called it mobile
-    else if (_size.width >= 376 && _size.width <= 768 && mobile != null) {
+    // If width is between 376 and 768 (excluding 768), we consider it a mobile
+    else if (_size.width >= 376 && _size.width < 768) {
       return mobile;
-    } else {
-      return smallMobile;
     }
-  }
-}
+    // If width is less than 376 and smallMobile is provided, use smallMobile
+    else if (_size.width < 376 && smallMobile != null) {
+      return smallMobile!;
+    }
+    // Default case if no specific condition is met
+    else {
+      return mobile; // Or provide a fallback widget if needed
+    }
+  }}

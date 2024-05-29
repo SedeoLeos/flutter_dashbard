@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecommerce_admin_tut/helpers/costants.dart';
-import 'package:ecommerce_admin_tut/models/brands.dart';
+import 'package:slaega_admin_ecommerce/helpers/costants.dart';
+import 'package:slaega_admin_ecommerce/models/brands.dart';
 
 class BrandsServices {
   String collection = "brands";

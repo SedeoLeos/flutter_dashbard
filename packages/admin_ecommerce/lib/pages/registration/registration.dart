@@ -1,8 +1,8 @@
-import 'package:ecommerce_admin_tut/provider/auth.dart';
-import 'package:ecommerce_admin_tut/rounting/route_names.dart';
-import 'package:ecommerce_admin_tut/services/navigation_service.dart';
-import 'package:ecommerce_admin_tut/widgets/custom_text.dart';
-import 'package:ecommerce_admin_tut/widgets/loading.dart';
+import 'package:slaega_admin_ecommerce/provider/auth.dart';
+import 'package:slaega_admin_ecommerce/rounting/route_names.dart';
+import 'package:slaega_admin_ecommerce/services/navigation_service.dart';
+import 'package:slaega_admin_ecommerce/widgets/custom_text.dart';
+import 'package:slaega_admin_ecommerce/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -42,7 +42,7 @@ class RegistrationPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CustomText(text: "REGISTRATION", size: 22, weight: FontWeight.bold,),
+                  CustomSelectableText(text: "REGISTRATION", size: 22, weight: FontWeight.bold,),
                   SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal:20),
@@ -117,7 +117,7 @@ class RegistrationPage extends StatelessWidget {
                         onPressed: ()async{
                                   if(!await authProvider.signUp()){
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("Registration failed!"))
+                      SnackBar(content: SelectableText("Registration failed!"))
 
                     );
                     return;
@@ -132,7 +132,7 @@ class RegistrationPage extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              CustomText(text: "REGISTER", size: 22, color: Colors.white, weight: FontWeight.bold,),
+                              CustomSelectableText(text: "REGISTER", size: 22, color: Colors.white, weight: FontWeight.bold,),
                             ],
                           ),
                         ),
@@ -146,12 +146,12 @@ class RegistrationPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomText(text: "Already have an account? ", size: 16,color: Colors.grey,),
+                        CustomSelectableText(text: "Already have an account? ", size: 16,color: Colors.grey,),
                         GestureDetector(
                             onTap: (){
                               locator<NavigationService>().globalNavigateTo(LoginRoute, context);
                             },
-                            child: CustomText(text: "Sign in here.. ", size: 16,color: Colors.indigo,)),
+                            child: CustomSelectableText(text: "Sign in here.. ", size: 16,color: Colors.indigo,)),
 
                       ],
                     ),

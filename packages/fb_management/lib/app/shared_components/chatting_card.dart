@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:project_management/app/constans/app_constants.dart';
+import 'package:slaega_fb_management/app/constans/app_constants.dart';
 
 class ChattingCardData {
   const ChattingCardData({

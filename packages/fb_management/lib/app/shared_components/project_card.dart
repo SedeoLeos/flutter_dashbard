@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:project_management/app/constans/app_constants.dart';
+import 'package:slaega_fb_management/app/constans/app_constants.dart';
 
 class ProjectCardData {
   final double percent;
@@ -133,7 +133,7 @@ class _SubtitleText extends StatelessWidget {
 }
 
 class _ReleaseTimeText extends StatelessWidget {
-  const _ReleaseTimeText(this.date, {Key? key}) : super(key: key);
+  const _ReleaseTimeText(this.date, {super.key});
 
   final DateTime date;
 

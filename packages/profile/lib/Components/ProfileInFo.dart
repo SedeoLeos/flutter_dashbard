@@ -34,7 +34,7 @@ class ProfileInFo extends StatelessWidget {
           children: [
             Icon(Icons.location_pin, size: 20, color: Colors.grey[400]),
             SizedBox(width: 5),
-            NormalGreyText('LOS ANGELES, CALIFORNIA')
+            NormalGreySelectableText('LOS ANGELES, CALIFORNIA')
           ]),
       SizedBox(height: 30),
       Row(
@@ -43,7 +43,7 @@ class ProfileInFo extends StatelessWidget {
           children: [
             Icon(Icons.work, size: 20, color: Colors.grey[400]),
             SizedBox(width: 5),
-            NormalGreyText('Solution Manager - Creative Team Officer')
+            NormalGreySelectableText('Solution Manager - Creative Team Officer')
           ]),
       SizedBox(height: 10),
       Row(
@@ -52,12 +52,12 @@ class ProfileInFo extends StatelessWidget {
           children: [
             Icon(Icons.school, size: 20, color: Colors.grey[400]),
             SizedBox(width: 5),
-            NormalGreyText('University of Computer Science')
+            NormalGreySelectableText('University of Computer Science')
           ]),
 
       /// description
       Divider(height: 30, thickness: 1, color: Colors.grey[300]),
-      NormalGreyText(data),
+      NormalGreySelectableText(data),
       SizedBox(height: 10),
       TextButtons('Show more', Colors.green)
     ]));

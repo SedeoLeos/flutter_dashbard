@@ -1,15 +1,15 @@
 import 'dart:math';
 
-import 'package:ecommerce_admin_tut/models/brands.dart';
-import 'package:ecommerce_admin_tut/models/categories.dart';
-import 'package:ecommerce_admin_tut/models/orders.dart';
-import 'package:ecommerce_admin_tut/models/products.dart';
-import 'package:ecommerce_admin_tut/models/user.dart';
-import 'package:ecommerce_admin_tut/services/brands.dart';
-import 'package:ecommerce_admin_tut/services/categories.dart';
-import 'package:ecommerce_admin_tut/services/orders.dart';
-import 'package:ecommerce_admin_tut/services/products.dart';
-import 'package:ecommerce_admin_tut/services/user.dart';
+import 'package:slaega_admin_ecommerce/models/brands.dart';
+import 'package:slaega_admin_ecommerce/models/categories.dart';
+import 'package:slaega_admin_ecommerce/models/orders.dart';
+import 'package:slaega_admin_ecommerce/models/products.dart';
+import 'package:slaega_admin_ecommerce/models/user.dart';
+import 'package:slaega_admin_ecommerce/services/brands.dart';
+import 'package:slaega_admin_ecommerce/services/categories.dart';
+import 'package:slaega_admin_ecommerce/services/orders.dart';
+import 'package:slaega_admin_ecommerce/services/products.dart';
+import 'package:slaega_admin_ecommerce/services/user.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_table/DatatableHeader.dart';
@@ -328,7 +328,7 @@ class TablesProvider with ChangeNotifier {
 
   onSelectAll(bool value) {
     if (value) {
-      selecteds = usersTableSource.map((entry) => entry).toList().cast();
+      selecteds = usersTableSource.map((entry) => entry)..cast();
     } else {
       selecteds.clear();
     }

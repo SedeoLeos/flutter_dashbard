@@ -1,9 +1,9 @@
-import 'package:ecommerce_admin_tut/locator.dart';
-import 'package:ecommerce_admin_tut/provider/auth.dart';
-import 'package:ecommerce_admin_tut/rounting/route_names.dart';
-import 'package:ecommerce_admin_tut/services/navigation_service.dart';
-import 'package:ecommerce_admin_tut/widgets/custom_text.dart';
-import 'package:ecommerce_admin_tut/widgets/loading.dart';
+import 'package:slaega_admin_ecommerce/locator.dart';
+import 'package:slaega_admin_ecommerce/provider/auth.dart';
+import 'package:slaega_admin_ecommerce/rounting/route_names.dart';
+import 'package:slaega_admin_ecommerce/services/navigation_service.dart';
+import 'package:slaega_admin_ecommerce/widgets/custom_text.dart';
+import 'package:slaega_admin_ecommerce/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CustomText(text: "LOGIN", size: 22, weight: FontWeight.bold,),
+                  CustomSelectableText(text: "LOGIN", size: 22, weight: FontWeight.bold,),
                   SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal:20),
@@ -93,7 +93,7 @@ class LoginPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        CustomText(text: "Forgot password?", size: 16,color: Colors.grey,),
+                        CustomSelectableText(text: "Forgot password?", size: 16,color: Colors.grey,),
                       ],
                     ),
                   ),
@@ -109,7 +109,7 @@ class LoginPage extends StatelessWidget {
                         onPressed: ()async{
                            if(!await authProvider.signIn()){
                     ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text("Login failed!"))
+                      SnackBar(content: SelectableText("Login failed!"))
 
                     );
                     return;
@@ -124,7 +124,7 @@ class LoginPage extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              CustomText(text: "LOGIN", size: 22, color: Colors.white, weight: FontWeight.bold,),
+                              CustomSelectableText(text: "LOGIN", size: 22, color: Colors.white, weight: FontWeight.bold,),
                             ],
                           ),
                         ),
@@ -138,12 +138,12 @@ class LoginPage extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        CustomText(text: "Do not have an account? ", size: 16,color: Colors.grey,),
+                        CustomSelectableText(text: "Do not have an account? ", size: 16,color: Colors.grey,),
                         GestureDetector(
                             onTap: (){
                               locator<NavigationService>().globalNavigateTo(RegistrationRoute, context);
                             },
-                            child: CustomText(text: "Sign up here. ", size: 16,color: Colors.indigo,)),
+                            child: CustomSelectableText(text: "Sign up here. ", size: 16,color: Colors.indigo,)),
 
                       ],
                     ),

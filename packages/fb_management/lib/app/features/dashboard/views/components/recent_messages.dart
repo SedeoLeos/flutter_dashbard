@@ -3,8 +3,7 @@ part of dashboard;
 class _RecentMessages extends StatelessWidget {
   const _RecentMessages({
     required this.onPressedMore,
-    Key? key,
-  }) : super(key: key);
+  });
 
   final Function() onPressedMore;
 

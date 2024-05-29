@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hr_management/common/app_colors.dart';
-import 'package:flutter_hr_management/common/app_responsive.dart';
-import 'package:flutter_hr_management/controllers/menu_controller.dart';
+import 'package:slaega_bussiness/common/app_colors.dart';
+import 'package:slaega_bussiness/common/app_responsive.dart';
+import 'package:slaega_bussiness/controllers/menu_controller.dart';
 import 'package:provider/provider.dart';
 
 import 'dashboard/dashboard.dart';
@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: SideBar(),
-      key: Provider.of<MenuController>(context, listen: false).scaffoldKey,
+      key: Provider.of<AppMenuController>(context, listen: false).scaffoldKey,
       backgroundColor: AppColor.bgSideMenu,
       body: SafeArea(
         child: Row(

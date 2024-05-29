@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/constants/content.dart';
-import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/widgets/button.dart';
+import 'package:slaega_dating/constants/content.dart';
+import 'package:slaega_dating/helpers/style.dart';
+import 'package:slaega_dating/widgets/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MobileScreen extends StatelessWidget {
@@ -18,29 +18,29 @@ class MobileScreen extends StatelessWidget {
           children: [
             Container(
               width: 450,
-              constraints: BoxConstraints(
+              constraints: const BoxConstraints(
                 maxWidth: 450
               ),
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.symmetric(horizontal: 20),
               child: RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
                     children: [
-                      TextSpan(
+                      const TextSpan(
                         text: "Get noticed for ",
                       ),
                       TextSpan(
                           text: "who",
                           style: GoogleFonts.roboto(
                               color: active)),
-                      TextSpan(
+                      const TextSpan(
                         text: " you are, ",
                       ),
                       TextSpan(
                           text: "not what",
                           style: GoogleFonts.roboto(
                               color: active)),
-                      TextSpan(
+                      const TextSpan(
                         text: " you look like.",
 
                       ),
@@ -52,11 +52,11 @@ class MobileScreen extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
 
         Container(
           width: 550,
-          constraints: BoxConstraints(maxWidth: 550),
+          constraints: const BoxConstraints(maxWidth: 550),
           child: Text(
             mainParagraph,
             textAlign: TextAlign.center,
@@ -65,19 +65,19 @@ class MobileScreen extends StatelessWidget {
                 height: 1.5
             ),),
         ),
-        SizedBox(height: 20,),
+        const SizedBox(height: 20,),
 
         Container(
-          constraints: BoxConstraints(maxWidth: 550),
-          padding: EdgeInsets.all(4),
-          margin:EdgeInsets.symmetric(horizontal:20),
+          constraints: const BoxConstraints(maxWidth: 550),
+          padding: const EdgeInsets.all(4),
+          margin:const EdgeInsets.symmetric(horizontal:20),
           decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(40),
               boxShadow: [
                 BoxShadow(
                     color: Colors.black.withOpacity(.1),
-                    offset: Offset(0, 40),
+                    offset: const Offset(0, 40),
                     blurRadius: 80
                 )
               ]
@@ -87,8 +87,8 @@ class MobileScreen extends StatelessWidget {
             children: [
               Container(
                 width: screenSize.width / 4,
-                padding: EdgeInsets.only(left:4),
-                child: TextField(
+                padding: const EdgeInsets.only(left:4),
+                child: const TextField(
                   decoration: InputDecoration(
                       icon: Icon(Icons.email_outlined),
                       hintText: "Email",
@@ -97,7 +97,7 @@ class MobileScreen extends StatelessWidget {
                 ),
               ),
 
-              CustomButton(text: "Get started",)
+              const CustomButton(text: "Get started",)
             ],
           ),
         ),

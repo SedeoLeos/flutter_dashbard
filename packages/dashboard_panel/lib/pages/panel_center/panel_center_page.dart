@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:admin_panel_responsive_flutter/pages/charts.dart';
+import 'package:slaega_dashboard_panel/pages/charts.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';

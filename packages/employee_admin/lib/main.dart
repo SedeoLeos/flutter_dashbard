@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/dashboard.dart';
-import 'package:responsive_dashboard/style/colors.dart';
+import 'package:slaega_employee_admin/dashboard.dart';
+import 'package:slaega_employee_admin/style/colors.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
+
+class SlaegaEmployeeAdmin extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

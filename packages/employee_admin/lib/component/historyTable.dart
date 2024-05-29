@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/config/responsive.dart';
-import 'package:responsive_dashboard/config/size_config.dart';
-import 'package:responsive_dashboard/data.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:slaega_employee_admin/config/responsive.dart';
+import 'package:slaega_employee_admin/config/size_config.dart';
+import 'package:slaega_employee_admin/data.dart';
+import 'package:slaega_employee_admin/style/colors.dart';
+import 'package:slaega_employee_admin/style/style.dart';
 
 class HistoryTable extends StatelessWidget {
-  const HistoryTable({
-    Key key,
-  }) : super(key: key);
+  const HistoryTable({super.key}) ;
 
   @override
   Widget build(BuildContext context) {
@@ -31,29 +29,29 @@ class HistoryTable extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 10.0, bottom: 10.0, left: 20.0),
                   child: CircleAvatar(
                     radius: 17,
-                    backgroundImage: NetworkImage(transactionHistory[index]["avatar"]),
+                    backgroundImage: NetworkImage(transactionHistory[index]["avatar"]!),
                   ),
                 ),
                 PrimaryText(
-                  text: transactionHistory[index]["label"],
+                  text: transactionHistory[index]["label"]!,
                   size: 16,
                   fontWeight: FontWeight.w400,
                   color: AppColors.secondary,
                 ),
                 PrimaryText(
-                  text: transactionHistory[index]["time"],
+                  text: transactionHistory[index]["time"]!,
                   size: 16,
                   fontWeight: FontWeight.w400,
                   color: AppColors.secondary,
                 ),
                 PrimaryText(
-                  text: transactionHistory[index]["amount"],
+                  text: transactionHistory[index]["amount"]!,
                   size: 16,
                   fontWeight: FontWeight.w400,
                   color: AppColors.secondary,
                 ),
                 PrimaryText(
-                  text: transactionHistory[index]["status"],
+                  text: transactionHistory[index]["status"]!,
                   size: 16,
                   fontWeight: FontWeight.w400,
                   color: AppColors.secondary,

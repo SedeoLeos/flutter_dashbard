@@ -1,4 +1,4 @@
-import 'package:ecommerce_admin_tut/services/navigation_service.dart';
+import 'package:slaega_admin_ecommerce/services/navigation_service.dart';
 import 'package:get_it/get_it.dart';
 
 GetIt locator = GetIt.instance;

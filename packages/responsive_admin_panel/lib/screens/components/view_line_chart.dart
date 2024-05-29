@@ -85,7 +85,7 @@ class _ViewLineChartState extends State<ViewLineChart> {
                 belowBarData: BarAreaData(
                     show: true,
                     colors:
-                        gradientColors.map((e) => e.withOpacity(0.3)).toList(),
+                        gradientColors.map((e) => e.withOpacity(0.3)).,
                     gradientFrom: Offset(0, 0),
                     gradientTo: Offset(0, 1.75)))
           ])),

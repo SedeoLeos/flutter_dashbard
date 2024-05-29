@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:ecommerce_admin_tut/helpers/costants.dart';
-import 'package:ecommerce_admin_tut/models/products.dart';
+import 'package:slaega_admin_ecommerce/helpers/costants.dart';
+import 'package:slaega_admin_ecommerce/models/products.dart';
 
 class ProductsServices {
   String collection = "products";

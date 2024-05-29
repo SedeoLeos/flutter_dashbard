@@ -9,9 +9,9 @@ class TopBuyerWidget extends StatelessWidget {
       leading:   CircleAvatar(
         backgroundImage: AssetImage('images/profile.jpg'),
       ),
-      title: Text('Mario Smith'),
-      subtitle: Text('33, orders'),
-      trailing: CustomText(text: '\$ 1,203', color: Colors.green.shade800, weight: FontWeight.bold,),
+      title: SelectableText('Mario Smith'),
+      subtitle: SelectableText('33, orders'),
+      trailing: CustomSelectableText(text: '\$ 1,203', color: Colors.green.shade800, weight: FontWeight.bold,),
     );
   }
 }

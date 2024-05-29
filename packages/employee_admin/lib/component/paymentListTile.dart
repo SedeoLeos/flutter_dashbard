@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:slaega_employee_admin/style/colors.dart';
+import 'package:slaega_employee_admin/style/style.dart';
 
 class PaymentListTile extends StatelessWidget {
   final String icon;
   final String label;
   final String amount;
 
-  const PaymentListTile({
-    this.icon, this.label, this.amount
+  const PaymentListTile({super.key, 
+    required this.icon,required this.label,required this.amount
   });
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: EdgeInsets.only(left: 0, right: 20),
+      contentPadding: const EdgeInsets.only(left: 0, right: 20),
       visualDensity: VisualDensity.standard,
       leading: Container(
           width: 50,
-          padding: EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
               vertical: 15, horizontal: 10),
           decoration: BoxDecoration(
             color: AppColors.white,
@@ -36,7 +36,7 @@ class PaymentListTile extends StatelessWidget {
       subtitle: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          PrimaryText(
+          const PrimaryText(
             text: 'Successfully',
             size: 12,
             fontWeight: FontWeight.w400,
@@ -49,7 +49,7 @@ class PaymentListTile extends StatelessWidget {
         ],
       ),
       onTap: () {
-        print('tap');
+        debugPrint('tap');
       },
       selected: true,
     );

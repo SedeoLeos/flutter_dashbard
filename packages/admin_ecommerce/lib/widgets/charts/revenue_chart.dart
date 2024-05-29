@@ -140,7 +140,7 @@ class _RevenueChartState extends State<RevenueChart> {
           ),
           belowBarData: BarAreaData(
             show: true,
-            colors: gradientColors.map((color) => color.withOpacity(0.3)).toList(),
+            colors: gradientColors.map((color) => color.withOpacity(0.3)).,
           ),
         ),
       ],

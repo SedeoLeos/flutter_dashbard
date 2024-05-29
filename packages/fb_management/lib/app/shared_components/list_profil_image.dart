@@ -29,8 +29,7 @@ class ListProfilImage extends StatelessWidget {
                 onPressed: onPressed,
               ),
             ),
-          )
-          .toList(),
+          ).toList(),
     );
   }
 

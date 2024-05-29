@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/style.dart';
-import 'package:flutter_web_example/widgets/button.dart';
+import 'package:slaega_dating/helpers/style.dart';
+import 'package:slaega_dating/widgets/button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NavBar extends StatefulWidget {
@@ -23,12 +23,12 @@ class _NavBarState extends State<NavBar> {
           child: Container(
             color: Colors.transparent,
             child: Padding(
-              padding: EdgeInsets.all(20),
+              padding: const EdgeInsets.all(20),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SizedBox(width: 20,),
-                  Image.asset("assets/images/logo.png"),
+                  const SizedBox(width: 20,),
+                  const Image(image: AssetImage("assets/images/logo.png",package: 'slaega_dating')),
                   Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -47,7 +47,7 @@ class _NavBarState extends State<NavBar> {
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 height: 12,
                               ),
                               Text(
@@ -58,7 +58,7 @@ class _NavBarState extends State<NavBar> {
                                   color: _isHovering[0] ? active : disable,
                                 ),
                               ),
-                              SizedBox(height: 5),
+                              const SizedBox(height: 5),
                               Visibility(
                                 maintainAnimation: true,
                                 maintainState: true,
@@ -121,7 +121,7 @@ class _NavBarState extends State<NavBar> {
                       ],
                     ),
                   ),
-                  CustomButton(text: "Register",),
+                  const CustomButton(text: "Register",),
                   SizedBox(width: screenSize.width / 40),
                 ],
               ),

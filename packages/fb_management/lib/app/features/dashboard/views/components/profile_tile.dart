@@ -12,7 +12,7 @@ class _ProfilTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       contentPadding: const EdgeInsets.all(0),
-      leading: CircleAvatar(backgroundImage: data.photo),
+      leading: CircleAvatar(backgroundImage: data.photo,),
       title: Text(
         data.name,
         style: TextStyle(fontSize: 14, color: kFontColorPallets[0]),

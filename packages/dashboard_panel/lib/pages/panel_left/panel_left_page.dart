@@ -1,4 +1,4 @@
-import 'package:admin_panel_responsive_flutter/responsive_layout.dart';
+import 'package:slaega_dashboard_panel/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';

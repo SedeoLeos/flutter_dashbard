@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hr_management/common/app_colors.dart';
+import 'package:slaega_bussiness/common/app_colors.dart';
 
 class ProfileCardWidget extends StatelessWidget {
+  const ProfileCardWidget({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -9,32 +11,33 @@ class ProfileCardWidget extends StatelessWidget {
         color: AppColor.white,
         borderRadius: BorderRadius.circular(10),
       ),
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Column(
         children: [
           Row(
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(1000),
-                child: Image.asset(
-                  "assets/user1.jpg",
+                child: const Image(
+                  image: AssetImage(
+                  "assets/user1.jpg",package: 'slaega_bussiness'),
                   height: 60,
                   width: 60,
                 ),
               ),
-              SizedBox(width: 10),
-              Column(
+              const SizedBox(width: 10),
+              const Column(
                 children: [
-                  Text(
+                  SelectableText(
                     "Kathy Walker",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  Text("HR Manager"),
+                  SelectableText("HR Manager"),
                 ],
               )
             ],
           ),
-          Divider(
+          const Divider(
             thickness: 0.5,
             color: Colors.grey,
           ),
@@ -48,11 +51,11 @@ class ProfileCardWidget extends StatelessWidget {
 
   Widget profileListTile(text, value) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: const EdgeInsets.symmetric(vertical: 8),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(text),
+          SelectableText(text),
           Text(
             value,
             style:

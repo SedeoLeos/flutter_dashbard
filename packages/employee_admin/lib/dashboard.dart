@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/component/appBarActionItems.dart';
-import 'package:responsive_dashboard/component/barChart.dart';
-import 'package:responsive_dashboard/component/header.dart';
-import 'package:responsive_dashboard/component/historyTable.dart';
-import 'package:responsive_dashboard/component/infoCard.dart';
-import 'package:responsive_dashboard/component/paymentDetailList.dart';
-import 'package:responsive_dashboard/component/sideMenu.dart';
-import 'package:responsive_dashboard/config/responsive.dart';
-import 'package:responsive_dashboard/config/size_config.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:slaega_employee_admin/component/appBarActionItems.dart';
+import 'package:slaega_employee_admin/component/barChart.dart';
+import 'package:slaega_employee_admin/component/header.dart';
+import 'package:slaega_employee_admin/component/historyTable.dart';
+import 'package:slaega_employee_admin/component/infoCard.dart';
+import 'package:slaega_employee_admin/component/paymentDetailList.dart';
+import 'package:slaega_employee_admin/component/sideMenu.dart';
+import 'package:slaega_employee_admin/config/responsive.dart';
+import 'package:slaega_employee_admin/config/size_config.dart';
+import 'package:slaega_employee_admin/style/colors.dart';
+import 'package:slaega_employee_admin/style/style.dart';
 
 class Dashboard extends StatelessWidget {
   GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
@@ -19,21 +19,21 @@ class Dashboard extends StatelessWidget {
     SizeConfig().init(context);
     return Scaffold(
       key: _drawerKey,
-      drawer: SizedBox(width: 100, child: SideMenu()),
+      drawer: const SizedBox(width: 100, child: SideMenu()),
       appBar: !Responsive.isDesktop(context)
           ? AppBar(
               elevation: 0,
               backgroundColor: AppColors.white,
               leading: IconButton(
                   onPressed: () {
-                    _drawerKey.currentState.openDrawer();
+                    _drawerKey.currentState!.openDrawer();
                   },
-                  icon: Icon(Icons.menu, color: AppColors.black)),
-              actions: [
+                  icon: const Icon(Icons.menu, color: AppColors.black)),
+              actions: const [
                 AppBarActionItems(),
               ],
             )
-          : PreferredSize(
+          : const PreferredSize(
               preferredSize: Size.zero,
               child: SizedBox(),
             ),
@@ -42,25 +42,25 @@ class Dashboard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             if (Responsive.isDesktop(context))
-              Expanded(
+              const Expanded(
                 flex: 1,
                 child: SideMenu(),
               ),
-            Expanded(
+             Expanded(
                 flex: 10,
                 child: SafeArea(
                   child: SingleChildScrollView(
-                    padding: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+                    padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 30),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Header(),
+                        const Header(),
                         SizedBox(
                           height: SizeConfig.blockSizeVertical * 4,
                         ),
                         SizedBox(
                           width: SizeConfig.screenWidth,
-                          child: Wrap(
+                          child: const Wrap(
                             spacing: 20,
                             runSpacing: 20,
                             alignment: WrapAlignment.spaceBetween,
@@ -87,7 +87,7 @@ class Dashboard extends StatelessWidget {
                         SizedBox(
                           height: SizeConfig.blockSizeVertical * 4,
                         ),
-                        Row(
+                        const Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -117,14 +117,14 @@ class Dashboard extends StatelessWidget {
                         SizedBox(
                           height: SizeConfig.blockSizeVertical * 3,
                         ),
-                        Container(
+                        const SizedBox(
                           height: 180,
                           child: BarChartCopmponent(),
                         ),
                         SizedBox(
                           height: SizeConfig.blockSizeVertical * 5,
                         ),
-                        Column(
+                        const Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             PrimaryText(
@@ -142,8 +142,8 @@ class Dashboard extends StatelessWidget {
                         SizedBox(
                           height: SizeConfig.blockSizeVertical * 3,
                         ),
-                        HistoryTable(),
-                        if (!Responsive.isDesktop(context)) PaymentDetailList()
+                        const HistoryTable(),
+                        if (!Responsive.isDesktop(context)) const PaymentDetailList()
                       ],
                     ),
                   ),
@@ -155,8 +155,8 @@ class Dashboard extends StatelessWidget {
                   child: Container(
                     width: double.infinity,
                     height: SizeConfig.screenHeight,
-                    decoration: BoxDecoration(color: AppColors.secondaryBg),
-                    child: SingleChildScrollView(
+                    decoration: const BoxDecoration(color: AppColors.secondaryBg),
+                    child: const SingleChildScrollView(
                       padding:
                           EdgeInsets.symmetric(vertical: 30, horizontal: 30),
                       child: Column(

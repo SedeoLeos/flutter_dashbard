@@ -435,7 +435,7 @@ class AnalyticsPage extends StatelessWidget {
                                                         .size
                                                         .width /
                                                     5,
-                                                child: Text('Agastya'),
+                                                child: SelectableText('Agastya'),
                                               ),
                                               Container(
                                                 padding: EdgeInsets.only(
@@ -510,7 +510,7 @@ class AnalyticsPage extends StatelessWidget {
                                                         .size
                                                         .width /
                                                     5,
-                                                child: Text('Anvika'),
+                                                child: SelectableText('Anvika'),
                                               ),
                                               Container(
                                                 padding: EdgeInsets.only(
@@ -585,7 +585,7 @@ class AnalyticsPage extends StatelessWidget {
                                                         .size
                                                         .width /
                                                     5,
-                                                child: Text('Brinda'),
+                                                child: SelectableText('Brinda'),
                                               ),
                                               Container(
                                                 padding: EdgeInsets.only(
@@ -660,7 +660,7 @@ class AnalyticsPage extends StatelessWidget {
                                                         .size
                                                         .width /
                                                     5,
-                                                child: Text('Chhaya'),
+                                                child: SelectableText('Chhaya'),
                                               ),
                                               Container(
                                                 padding: EdgeInsets.only(
@@ -735,7 +735,7 @@ class AnalyticsPage extends StatelessWidget {
                                                         .size
                                                         .width /
                                                     5,
-                                                child: Text('Binita'),
+                                                child: SelectableText('Binita'),
                                               ),
                                               Container(
                                                 padding: EdgeInsets.only(
@@ -810,7 +810,7 @@ class AnalyticsPage extends StatelessWidget {
                                                         .size
                                                         .width /
                                                     5,
-                                                child: Text('Aarna'),
+                                                child: SelectableText('Aarna'),
                                               ),
                                               Container(
                                                 padding: EdgeInsets.only(

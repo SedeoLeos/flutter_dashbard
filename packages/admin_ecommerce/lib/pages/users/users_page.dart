@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:ecommerce_admin_tut/provider/tables.dart';
-import 'package:ecommerce_admin_tut/widgets/page_header.dart';
+import 'package:slaega_admin_ecommerce/provider/tables.dart';
+import 'package:slaega_admin_ecommerce/widgets/page_header.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_table/ResponsiveDatatable.dart';
@@ -44,7 +44,7 @@ class _UsersPageState extends State<UsersPage> {
                     ? RaisedButton.icon(
                         onPressed: () {},
                         icon: Icon(Icons.add),
-                        label: Text("ADD CATEGORY"))
+                        label: SelectableText("ADD CATEGORY"))
                     : null,
                 actions: [
                   if (tablesProvider.isSearch)
@@ -87,7 +87,7 @@ class _UsersPageState extends State<UsersPage> {
                 footers: [
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: Text("Rows per page:"),
+                    child: SelectableText("Rows per page:"),
                   ),
                   if (tablesProvider.perPages != null)
                     Container(
@@ -96,10 +96,10 @@ class _UsersPageState extends State<UsersPage> {
                           value: tablesProvider.currentPerPage,
                           items: tablesProvider.perPages
                               .map((e) => DropdownMenuItem(
-                                    child: Text("$e"),
+                                    child: SelectableText("$e"),
                                     value: e,
                                   ))
-                              .toList(),
+                              .,
                           onChanged: (value) {}),
                     ),
                   Container(

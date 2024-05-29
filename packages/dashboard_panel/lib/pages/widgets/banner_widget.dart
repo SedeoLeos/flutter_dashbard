@@ -1,4 +1,4 @@
-import 'package:admin_panel_responsive_flutter/responsive_layout.dart';
+import 'package:slaega_dashboard_panel/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
 class BannerWidget extends StatelessWidget {
@@ -9,21 +9,21 @@ class BannerWidget extends StatelessWidget {
         );
     Widget box1() => ListTile(
           leading: Icon(Icons.book),
-          title: Text("Yoo"),
-          subtitle: Text("Looo"),
-          trailing: Chip(label: Text("3,999")),
+          title: SelectableText("Yoo"),
+          subtitle: SelectableText("Looo"),
+          trailing: Chip(label: SelectableText("3,999")),
         );
     Widget box2() => ListTile(
           leading: Icon(Icons.book),
-          title: Text("Yoo2"),
-          subtitle: Text("Looo2"),
-          trailing: Chip(label: Text("3,999")),
+          title: SelectableText("Yoo2"),
+          subtitle: SelectableText("Looo2"),
+          trailing: Chip(label: SelectableText("3,999")),
         );
     Widget box3() => ListTile(
           leading: Icon(Icons.book),
-          title: Text("Yoo3"),
-          subtitle: Text("Looo3"),
-          trailing: Chip(label: Text("3,999")),
+          title: SelectableText("Yoo3"),
+          subtitle: SelectableText("Looo3"),
+          trailing: Chip(label: SelectableText("3,999")),
         );
     return ResponsiveLayout(
         tiny: Container(),

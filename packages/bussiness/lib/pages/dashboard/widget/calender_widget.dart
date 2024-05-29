@@ -1,7 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_hr_management/common/app_colors.dart';
+import 'package:slaega_bussiness/common/app_colors.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -24,7 +24,7 @@ class _CalendarWidgetState extends State<CalendarWidget> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              SelectableText(
                 "${DateFormat("MMM, yyyy").format(_focusedDay)}",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),

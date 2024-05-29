@@ -22,7 +22,7 @@ class Chart extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(height: Constants.kPadding),
+                const SizedBox(height: Constants.kPadding),
                 Text(
                   "29.1",
                   style: Theme.of(context).textTheme.headline4!.copyWith(
@@ -31,7 +31,7 @@ class Chart extends StatelessWidget {
                         height: 0.5,
                       ),
                 ),
-                Text("of 128GB")
+                const SelectableText("of 128GB")
               ],
             ),
           ),
@@ -49,19 +49,19 @@ List<PieChartSectionData> paiChartSelectionDatas = [
     radius: 25,
   ),
   PieChartSectionData(
-    color: Color(0xFF26E5FF),
+    color: const Color(0xFF26E5FF),
     value: 20,
     showTitle: false,
     radius: 22,
   ),
   PieChartSectionData(
-    color: Color(0xFFFFCF26),
+    color: const Color(0xFFFFCF26),
     value: 10,
     showTitle: false,
     radius: 19,
   ),
   PieChartSectionData(
-    color: Color(0xFFEE2727),
+    color: const Color(0xFFEE2727),
     value: 15,
     showTitle: false,
     radius: 16,
@@ -129,11 +129,11 @@ class PieChart2State extends State {
                 ),
               ),
             ),
-            Column(
+            const Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const <Widget>[
+              children: <Widget>[
                 Indicator(
                   color: Color(0xff0293ee),
                   text: 'First',
@@ -350,14 +350,14 @@ class _LineChartSample2State extends State<LineChartSample2> {
         show: true,
         drawVerticalLine: true,
         getDrawingHorizontalLine: (value) {
-          return FlLine(
-            color: const Color(0xff37434d),
+          return const FlLine(
+            color: Color(0xff37434d),
             strokeWidth: 1,
           );
         },
         getDrawingVerticalLine: (value) {
-          return FlLine(
-            color: const Color(0xff37434d),
+          return const FlLine(
+            color: Color(0xff37434d),
             strokeWidth: 1,
           );
         },
@@ -371,7 +371,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
               color: Color(0xff68737d),
               fontWeight: FontWeight.bold,
               fontSize: 16),
-          getTitles: (value) {
+          showTitles: (value) {
             switch (value.toInt()) {
               case 2:
                 return 'MAR';
@@ -416,25 +416,25 @@ class _LineChartSample2State extends State<LineChartSample2> {
       lineBarsData: [
         LineChartBarData(
           spots: [
-            FlSpot(0, 3),
-            FlSpot(2.6, 2),
-            FlSpot(4.9, 5),
-            FlSpot(6.8, 3.1),
-            FlSpot(8, 4),
-            FlSpot(9.5, 3),
-            FlSpot(11, 4),
+            const FlSpot(0, 3),
+            const FlSpot(2.6, 2),
+            const FlSpot(4.9, 5),
+            const FlSpot(6.8, 3.1),
+            const FlSpot(8, 4),
+            const FlSpot(9.5, 3),
+            const FlSpot(11, 4),
           ],
           isCurved: true,
-          colors: gradientColors,
+          spots: gradientColors,
           barWidth: 5,
           isStrokeCapRound: true,
-          dotData: FlDotData(
+          dotData: const FlDotData(
             show: false,
           ),
           belowBarData: BarAreaData(
             show: true,
             colors:
-                gradientColors.map((color) => color.withOpacity(0.3)).toList(),
+                gradientColors.map((color) => color.withOpacity(0.3)).,
           ),
         ),
       ],
@@ -443,19 +443,19 @@ class _LineChartSample2State extends State<LineChartSample2> {
 
   LineChartData avgData() {
     return LineChartData(
-      lineTouchData: LineTouchData(enabled: false),
+      lineTouchData: const LineTouchData(enabled: false),
       gridData: FlGridData(
         show: true,
         drawHorizontalLine: true,
         getDrawingVerticalLine: (value) {
-          return FlLine(
-            color: const Color(0xff37434d),
+          return const FlLine(
+            color: Color(0xff37434d),
             strokeWidth: 1,
           );
         },
         getDrawingHorizontalLine: (value) {
-          return FlLine(
-            color: const Color(0xff37434d),
+          return const FlLine(
+            color: Color(0xff37434d),
             strokeWidth: 1,
           );
         },
@@ -514,13 +514,13 @@ class _LineChartSample2State extends State<LineChartSample2> {
       lineBarsData: [
         LineChartBarData(
           spots: [
-            FlSpot(0, 3.44),
-            FlSpot(2.6, 3.44),
-            FlSpot(4.9, 3.44),
-            FlSpot(6.8, 3.44),
-            FlSpot(8, 3.44),
-            FlSpot(9.5, 3.44),
-            FlSpot(11, 3.44),
+            const FlSpot(0, 3.44),
+            const FlSpot(2.6, 3.44),
+            const FlSpot(4.9, 3.44),
+            const FlSpot(6.8, 3.44),
+            const FlSpot(8, 3.44),
+            const FlSpot(9.5, 3.44),
+            const FlSpot(11, 3.44),
           ],
           isCurved: true,
           colors: [
@@ -531,7 +531,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
           ],
           barWidth: 5,
           isStrokeCapRound: true,
-          dotData: FlDotData(
+          dotData: const FlDotData(
             show: false,
           ),
           belowBarData: BarAreaData(show: true, colors: [
@@ -650,7 +650,7 @@ class LineChartSample1State extends State<LineChartSample1> {
         touchCallback: (LineTouchResponse touchResponse) {},
         handleBuiltInTouches: true,
       ),
-      gridData: FlGridData(
+      gridData: const FlGridData(
         show: false,
       ),
       titlesData: FlTitlesData(
@@ -728,13 +728,13 @@ class LineChartSample1State extends State<LineChartSample1> {
   List<LineChartBarData> linesBarData1() {
     final lineChartBarData1 = LineChartBarData(
       spots: [
-        FlSpot(1, 1),
-        FlSpot(3, 1.5),
-        FlSpot(5, 1.4),
-        FlSpot(7, 3.4),
-        FlSpot(10, 2),
-        FlSpot(12, 2.2),
-        FlSpot(13, 1.8),
+        const FlSpot(1, 1),
+        const FlSpot(3, 1.5),
+        const FlSpot(5, 1.4),
+        const FlSpot(7, 3.4),
+        const FlSpot(10, 2),
+        const FlSpot(12, 2.2),
+        const FlSpot(13, 1.8),
       ],
       isCurved: true,
       colors: [
@@ -742,7 +742,7 @@ class LineChartSample1State extends State<LineChartSample1> {
       ],
       barWidth: 8,
       isStrokeCapRound: true,
-      dotData: FlDotData(
+      dotData: const FlDotData(
         show: false,
       ),
       belowBarData: BarAreaData(
@@ -751,12 +751,12 @@ class LineChartSample1State extends State<LineChartSample1> {
     );
     final lineChartBarData2 = LineChartBarData(
       spots: [
-        FlSpot(1, 1),
-        FlSpot(3, 2.8),
-        FlSpot(7, 1.2),
-        FlSpot(10, 2.8),
-        FlSpot(12, 2.6),
-        FlSpot(13, 3.9),
+        const FlSpot(1, 1),
+        const FlSpot(3, 2.8),
+        const FlSpot(7, 1.2),
+        const FlSpot(10, 2.8),
+        const FlSpot(12, 2.6),
+        const FlSpot(13, 3.9),
       ],
       isCurved: true,
       colors: [
@@ -764,7 +764,7 @@ class LineChartSample1State extends State<LineChartSample1> {
       ],
       barWidth: 8,
       isStrokeCapRound: true,
-      dotData: FlDotData(
+      dotData: const FlDotData(
         show: false,
       ),
       belowBarData: BarAreaData(show: false, colors: [
@@ -773,17 +773,17 @@ class LineChartSample1State extends State<LineChartSample1> {
     );
     final lineChartBarData3 = LineChartBarData(
       spots: [
-        FlSpot(1, 2.8),
-        FlSpot(3, 1.9),
-        FlSpot(6, 3),
-        FlSpot(10, 1.3),
-        FlSpot(13, 2.5),
+        const FlSpot(1, 2.8),
+        const FlSpot(3, 1.9),
+        const FlSpot(6, 3),
+        const FlSpot(10, 1.3),
+        const FlSpot(13, 2.5),
       ],
       isCurved: true,
       colors: const [Color(0xfff8b250)],
       barWidth: 8,
       isStrokeCapRound: true,
-      dotData: FlDotData(
+      dotData: const FlDotData(
         show: false,
       ),
       belowBarData: BarAreaData(
@@ -799,10 +799,10 @@ class LineChartSample1State extends State<LineChartSample1> {
 
   LineChartData sampleData2() {
     return LineChartData(
-      lineTouchData: LineTouchData(
+      lineTouchData: const LineTouchData(
         enabled: false,
       ),
-      gridData: FlGridData(
+      gridData: const FlGridData(
         show: false,
       ),
       titlesData: FlTitlesData(
@@ -882,13 +882,13 @@ class LineChartSample1State extends State<LineChartSample1> {
     return [
       LineChartBarData(
         spots: [
-          FlSpot(1, 1),
-          FlSpot(3, 4),
-          FlSpot(5, 1.8),
-          FlSpot(7, 5),
-          FlSpot(10, 2),
-          FlSpot(12, 2.2),
-          FlSpot(13, 1.8),
+          const FlSpot(1, 1),
+          const FlSpot(3, 4),
+          const FlSpot(5, 1.8),
+          const FlSpot(7, 5),
+          const FlSpot(10, 2),
+          const FlSpot(12, 2.2),
+          const FlSpot(13, 1.8),
         ],
         isCurved: true,
         curveSmoothness: 0,
@@ -897,7 +897,7 @@ class LineChartSample1State extends State<LineChartSample1> {
         ],
         barWidth: 4,
         isStrokeCapRound: true,
-        dotData: FlDotData(
+        dotData: const FlDotData(
           show: false,
         ),
         belowBarData: BarAreaData(
@@ -906,12 +906,12 @@ class LineChartSample1State extends State<LineChartSample1> {
       ),
       LineChartBarData(
         spots: [
-          FlSpot(1, 1),
-          FlSpot(3, 2.8),
-          FlSpot(7, 1.2),
-          FlSpot(10, 2.8),
-          FlSpot(12, 2.6),
-          FlSpot(13, 3.9),
+          const FlSpot(1, 1),
+          const FlSpot(3, 2.8),
+          const FlSpot(7, 1.2),
+          const FlSpot(10, 2.8),
+          const FlSpot(12, 2.6),
+          const FlSpot(13, 3.9),
         ],
         isCurved: true,
         colors: const [
@@ -919,7 +919,7 @@ class LineChartSample1State extends State<LineChartSample1> {
         ],
         barWidth: 4,
         isStrokeCapRound: true,
-        dotData: FlDotData(
+        dotData: const FlDotData(
           show: false,
         ),
         belowBarData: BarAreaData(show: true, colors: [
@@ -928,11 +928,11 @@ class LineChartSample1State extends State<LineChartSample1> {
       ),
       LineChartBarData(
         spots: [
-          FlSpot(1, 3.8),
-          FlSpot(3, 1.9),
-          FlSpot(6, 5),
-          FlSpot(10, 3.3),
-          FlSpot(13, 4.5),
+          const FlSpot(1, 3.8),
+          const FlSpot(3, 1.9),
+          const FlSpot(6, 5),
+          const FlSpot(10, 3.3),
+          const FlSpot(13, 4.5),
         ],
         isCurved: true,
         curveSmoothness: 0,
@@ -941,7 +941,7 @@ class LineChartSample1State extends State<LineChartSample1> {
         ],
         barWidth: 2,
         isStrokeCapRound: true,
-        dotData: FlDotData(show: true),
+        dotData: const FlDotData(show: true),
         belowBarData: BarAreaData(
           show: false,
         ),
@@ -1014,17 +1014,17 @@ class BarChartSample2State extends State<BarChartSample2> {
               mainAxisAlignment: MainAxisAlignment.start,
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
-                Row(
+                const Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     //makeTransactionsIcon(),
-                    const Text(
+                    Text(
                       'Monthly Profits',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
-                    const Text(
+                    Text(
                       r'$345,462',
                       style: TextStyle(
                         color: Colors.white,
@@ -1109,8 +1109,8 @@ class BarChartSample2State extends State<BarChartSample2> {
                                           showingBarGroups[touchedGroupIndex]
                                               .barRods
                                               .map((rod) {
-                                        return rod.copyWith(y: avg);
-                                      }).toList(),
+                                        return rod.copyWith(fromY: avg);
+                                      }).,
                                     );
                                   }
                                 }

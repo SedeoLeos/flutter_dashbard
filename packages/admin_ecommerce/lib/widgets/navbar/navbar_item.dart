@@ -1,4 +1,4 @@
-import 'package:ecommerce_admin_tut/services/navigation_service.dart';
+import 'package:slaega_admin_ecommerce/services/navigation_service.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

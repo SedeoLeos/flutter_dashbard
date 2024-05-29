@@ -22,7 +22,7 @@ class BarChartSample1State extends State<BarChartSample1> {
   final Color barBackgroundColor = const Color(0xff72d8bf);
   final Duration animDuration = const Duration(milliseconds: 250);
 
-  int touchedIndex;
+  late int touchedIndex;
 
   bool isPlaying = false;
 
@@ -111,13 +111,13 @@ class BarChartSample1State extends State<BarChartSample1> {
       x: x,
       barRods: [
         BarChartRodData(
-          y: isTouched ? y + 1 : y,
-          colors: isTouched ? [Colors.yellow] : [barColor],
+          toY: isTouched ? y + 1 : y,
+          color: isTouched ? Colors.yellow : barColor,
           width: width,
           backDrawRodData: BackgroundBarChartRodData(
             show: true,
-            y: 20,
-            colors: [barBackgroundColor],
+            fromY: 20,
+            color: barBackgroundColor,
           ),
         ),
       ],
@@ -125,7 +125,7 @@ class BarChartSample1State extends State<BarChartSample1> {
     );
   }
 
-  List<BarChartGroupData> showingGroups() => List.generate(7, (i) {
+  List<BarChartGroupData?> showingGroups() => List.generate(7, (i) {
     switch (i) {
       case 0:
         return makeGroupData(0, 5, isTouched: i == touchedIndex);
@@ -179,7 +179,7 @@ class BarChartSample1State extends State<BarChartSample1> {
               return BarTooltipItem(
                   weekDay + '\n' + (rod.y - 1).toString(), TextStyle(color: Colors.yellow));
             }),
-        touchCallback: (barTouchResponse) {
+        touchCallback: (b) {
           setState(() {
             if (barTouchResponse.spot != null &&
                 barTouchResponse.touchInput is! FlPanEnd &&
@@ -230,7 +230,7 @@ class BarChartSample1State extends State<BarChartSample1> {
     );
   }
 
-  BarChartData randomData() {
+  BarChartData? randomData() {
     return BarChartData(
       barTouchData: BarTouchData(
         enabled: false,
@@ -242,7 +242,7 @@ class BarChartSample1State extends State<BarChartSample1> {
           getTextStyles: (value) =>
           const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14),
           margin: 16,
-          getTitles: (double value) {
+          showTitles: (double value) {
             switch (value.toInt()) {
               case 0:
                 return 'M';

@@ -13,7 +13,7 @@ class PageHeader extends StatelessWidget {
         SizedBox(width: 30,),
         Padding(
           padding: const EdgeInsets.all(14),
-          child: CustomText(text: text, size: 40, weight: FontWeight.bold, color: Colors.grey,),
+          child: CustomSelectableText(text: text, size: 40, weight: FontWeight.bold, color: Colors.grey,),
         ),
       ],
     );

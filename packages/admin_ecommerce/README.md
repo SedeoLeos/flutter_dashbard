@@ -1,4 +1,4 @@
-# ecommerce_admin_tut
+# slaega_admin_ecommerce
 
 A new Flutter project.
 

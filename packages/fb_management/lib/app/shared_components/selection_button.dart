@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project_management/app/constans/app_constants.dart';
+import 'package:slaega_fb_management/app/constans/app_constants.dart';
 import 'package:get/get.dart';
 
 class SelectionButtonData {
@@ -60,7 +60,7 @@ class _SelectionButtonState extends State<SelectionButton> {
             },
             data: data,
           ),
-        );
+        ) ;
       }).toList(),
     );
   }
@@ -94,7 +94,7 @@ class _Button extends StatelessWidget {
             children: [
               _icon((!selected) ? data.icon : data.activeIcon),
               const SizedBox(width: kSpacing / 2),
-              Expanded(child: _labelText(data.label)),
+              Expanded(child: _labelSelectableText(data.label)),
               if (data.totalNotif != null)
                 Padding(
                   padding: const EdgeInsets.only(left: kSpacing / 2),
@@ -117,7 +117,7 @@ class _Button extends StatelessWidget {
     );
   }
 
-  Widget _labelText(String data) {
+  Widget _labelSelectableText(String data) {
     return Text(
       data,
       style: TextStyle(

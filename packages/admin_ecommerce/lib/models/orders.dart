@@ -9,12 +9,12 @@ class OrderModel {
   static const STATUS = "status";
   static const CREATED_AT = "createdAt";
 
-  String _id;
-  String _description;
-  String _userId;
-  String _status;
-  int _createdAt;
-  int _total;
+  late String _id;
+  late String _description;
+  late String _userId;
+  late String _status;
+  late int _createdAt;
+  late int _total;
 
 //  getters
   String get id => _id;
@@ -30,15 +30,16 @@ class OrderModel {
   int get createdAt => _createdAt;
 
   // public variable
-  List cart;
+  late List cart;
 
   OrderModel.fromSnapshot(DocumentSnapshot snapshot) {
-    _id = snapshot.data()[ID];
-    _description = snapshot.data()[DESCRIPTION];
-    _total = snapshot.data()[TOTAL];
-    _status = snapshot.data()[STATUS];
-    _userId = snapshot.data()[USER_ID];
-    _createdAt = snapshot.data()[CREATED_AT];
-    cart = snapshot.data()[CART];
+    final data = snapshot.data() as Map<String,dynamic>;
+    _id =data[ID];
+    _description =data[DESCRIPTION];
+    _total =data[TOTAL];
+    _status =data[STATUS];
+    _userId =data[USER_ID];
+    _createdAt =data[CREATED_AT];
+    cart =data[CART];
   }
 }

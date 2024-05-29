@@ -1,4 +1,4 @@
 import 'package:flutter/material.dart';
-Color active = Color(0xFFED9B59);
-Color disable = Color(0xFF7D8790);
-Color bgColor = Color(0xFFFEEFE3);
+Color active = const Color.fromARGB(255, 237, 89, 220);
+Color disable = const Color(0xFF7D8790);
+Color bgColor = const Color.fromARGB(255, 254, 227, 252);

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/pages/home/home.dart';
+import 'package:slaega_dating/pages/home/home.dart';
 
 
-void main(){
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
+
+class SlaegaDating extends StatelessWidget {
+  const SlaegaDating({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

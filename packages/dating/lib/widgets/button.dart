@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/style.dart';
+import 'package:slaega_dating/helpers/style.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
  final  String text;
 
-  const CustomButton({Key key, this.text}) : super(key: key);
+  const CustomButton({super.key,required this.text}) ;
   @override
   Widget build(BuildContext context) {
     return Container(

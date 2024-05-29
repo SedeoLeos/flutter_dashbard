@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/config/responsive.dart';
-import 'package:responsive_dashboard/config/size_config.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:slaega_employee_admin/config/responsive.dart';
+import 'package:slaega_employee_admin/config/size_config.dart';
+import 'package:slaega_employee_admin/style/colors.dart';
+import 'package:slaega_employee_admin/style/style.dart';
 
 class InfoCard extends StatelessWidget {
   final String icon;
   final String label;
   final String amount;
 
-  InfoCard({this.icon, this.label, this.amount});
+  const InfoCard({super.key, required this.icon, required this.label, required this.amount});
 
   @override
   Widget build(BuildContext context) {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hr_management/common/app_colors.dart';
-import 'package:flutter_hr_management/common/app_responsive.dart';
+import 'package:slaega_bussiness/common/app_colors.dart';
+import 'package:slaega_bussiness/common/app_responsive.dart';
 
 import 'widget/calender_widget.dart';
 import 'widget/header_widget.dart';
@@ -43,7 +43,7 @@ class _DashboardState extends State<Dashboard> {
                           ),
                           if (AppResponsive.isMobile(context)) ...{
                             CalendarWidget(),
-                            SizedBox(
+                            const SizedBox(
                               height: 20,
                             ),
                           },

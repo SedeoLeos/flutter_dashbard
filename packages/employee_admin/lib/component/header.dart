@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/config/responsive.dart';
-import 'package:responsive_dashboard/style/colors.dart';
-import 'package:responsive_dashboard/style/style.dart';
+import 'package:slaega_employee_admin/config/responsive.dart';
+import 'package:slaega_employee_admin/style/colors.dart';
+import 'package:slaega_employee_admin/style/style.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    Key key,
-  }) : super(key: key);
+  const Header({super.key, 
+    
+  }) ;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-      SizedBox(
+      const SizedBox(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -30,7 +30,7 @@ class Header extends StatelessWidget {
               )
             ]),
       ),
-      Spacer(
+      const Spacer(
         flex: 1,
       ),
       Expanded(
@@ -40,18 +40,18 @@ class Header extends StatelessWidget {
             filled: true,
             fillColor: AppColors.white,
             contentPadding:
-                EdgeInsets.only(left: 40.0, right: 5),
+                const EdgeInsets.only(left: 40.0, right: 5),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: AppColors.white),
+              borderSide: const BorderSide(color: AppColors.white),
             ),
              focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(30),
-              borderSide: BorderSide(color: AppColors.white),
+              borderSide: const BorderSide(color: AppColors.white),
             ),
-            prefixIcon: Icon(Icons.search, color: AppColors.black),
+            prefixIcon: const Icon(Icons.search, color: AppColors.black),
             hintText: 'Search',
-            hintStyle: TextStyle(color: AppColors.secondary, fontSize: 14)
+            hintStyle: const TextStyle(color: AppColors.secondary, fontSize: 14)
           ),
         ),
       ),

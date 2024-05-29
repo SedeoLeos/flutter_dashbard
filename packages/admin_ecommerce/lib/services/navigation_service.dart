@@ -5,7 +5,7 @@ class NavigationService {
   GlobalKey<NavigatorState>();
 
   Future<dynamic> navigateTo(String routeName) {
-    return navigatorKey.currentState.pushNamed(routeName);
+    return navigatorKey.currentState!.pushNamed(routeName);
   }
 
   Future<dynamic> globalNavigateTo(String routeName, BuildContext context) {
@@ -14,7 +14,7 @@ class NavigationService {
 
 
   void goBack() {
-    return navigatorKey.currentState.pop();
+    return navigatorKey.currentState!.pop();
   }
 
 

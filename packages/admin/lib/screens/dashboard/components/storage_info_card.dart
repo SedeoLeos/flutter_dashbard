@@ -55,7 +55,7 @@ class StorageInfoCard extends StatelessWidget {
               ),
             ),
           ),
-          Text(amountOfFiles)
+          SelectableText(amountOfFiles)
         ],
       ),
     );

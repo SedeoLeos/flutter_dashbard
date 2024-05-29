@@ -8,7 +8,7 @@ Widget IconLabelButtons(String lebel, String path) => TextButton.icon(
       width: 20,
       color: Colors.white,
     ),
-    label: Text(lebel, style: TextStyle(color: Colors.white)));
+    label: SelectableText(lebel, style: TextStyle(color: Colors.white)));
 
 Widget TextButtons(String label, Color color) => TextButton(
     child: Text(label,

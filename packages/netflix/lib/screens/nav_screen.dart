@@ -44,10 +44,10 @@ class _NavScreenState extends State<NavScreen> {
                       title,
                       BottomNavigationBarItem(
                         icon: Icon(icon, size: 30.0),
-                        title: Text(title),
+                        title: SelectableText(title),
                       )))
                   .values
-                  .toList(),
+                  .,
               currentIndex: _currentIndex,
               selectedItemColor: Colors.white,
               selectedFontSize: 11.0,

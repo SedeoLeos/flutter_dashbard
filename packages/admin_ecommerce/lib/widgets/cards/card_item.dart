@@ -7,19 +7,18 @@ class CardItem extends StatelessWidget {
   final String subtitle;
   final String title;
   final String value;
-  final Color color1;
-  final Color color2;
-  final IconData icon;
+  final Color? color1;
+  final Color? color2;
+  final IconData? icon;
 
   const CardItem(
-      {Key key,
-      this.title,
-      this.value,
+      {super.key,
+      required this.title,
+      required this.value,
       this.color1,
       this.color2,
       this.icon,
-      this.subtitle})
-      : super(key: key);
+      required this.subtitle});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class CardItem extends StatelessWidget {
                        end: Alignment.topRight),
                    boxShadow: [
                      BoxShadow(
-                         color: Colors.grey[300], offset: Offset(0, 3), blurRadius: 16)
+                         color: Colors.grey[300]!, offset: const Offset(0, 3), blurRadius: 16)
                    ]),
                child: Row(
                  mainAxisAlignment: MainAxisAlignment.spaceBetween,

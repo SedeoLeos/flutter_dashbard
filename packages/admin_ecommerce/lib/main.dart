@@ -1,11 +1,11 @@
-import 'package:ecommerce_admin_tut/pages/login/login.dart';
-import 'package:ecommerce_admin_tut/provider/app_provider.dart';
-import 'package:ecommerce_admin_tut/provider/auth.dart';
-import 'package:ecommerce_admin_tut/provider/tables.dart';
-import 'package:ecommerce_admin_tut/rounting/route_names.dart';
-import 'package:ecommerce_admin_tut/rounting/router.dart';
-import 'package:ecommerce_admin_tut/widgets/layout/layout.dart';
-import 'package:ecommerce_admin_tut/widgets/loading.dart';
+import 'package:slaega_admin_ecommerce/pages/login/login.dart';
+import 'package:slaega_admin_ecommerce/provider/app_provider.dart';
+import 'package:slaega_admin_ecommerce/provider/auth.dart';
+import 'package:slaega_admin_ecommerce/provider/tables.dart';
+import 'package:slaega_admin_ecommerce/rounting/route_names.dart';
+import 'package:slaega_admin_ecommerce/rounting/router.dart';
+import 'package:slaega_admin_ecommerce/widgets/layout/layout.dart';
+import 'package:slaega_admin_ecommerce/widgets/loading.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -48,10 +48,10 @@ class AppPagesController extends StatelessWidget {
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
-          return Scaffold(
+          return const Scaffold(
             body: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text("Something went wrong")],
+              children: [SelectableText("Something went wrong")],
             ),
           );
         }
@@ -73,7 +73,7 @@ class AppPagesController extends StatelessWidget {
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
-        return Scaffold(
+        return const Scaffold(
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [CircularProgressIndicator()],

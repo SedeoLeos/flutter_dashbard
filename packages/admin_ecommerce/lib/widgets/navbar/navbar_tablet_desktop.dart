@@ -1,5 +1,5 @@
-import 'package:ecommerce_admin_tut/helpers/app_colors.dart';
-import 'package:ecommerce_admin_tut/widgets/custom_text.dart';
+import 'package:slaega_admin_ecommerce/helpers/app_colors.dart';
+import 'package:slaega_admin_ecommerce/widgets/custom_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +29,7 @@ class NavigationTabletDesktop extends StatelessWidget {
                 children: [
                  FlatButton.icon(
                    icon: Icon(Icons.notifications),
-                   label: CustomText(text: 'Notifications',),
+                   label: CustomSelectableText(text: 'Notifications',),
                    onPressed: (){},
                  ),
                   Positioned(
@@ -51,7 +51,7 @@ class NavigationTabletDesktop extends StatelessWidget {
               ),
               FlatButton.icon(
                 icon: Icon(Icons.settings),
-                label: CustomText(text: 'Settings',),
+                label: CustomSelectableText(text: 'Settings',),
                 onPressed: (){},
               ),
               SizedBox(
@@ -65,7 +65,7 @@ class NavigationTabletDesktop extends StatelessWidget {
                     backgroundImage: AssetImage('images/profile.jpg'),
                   ),
                   SizedBox(width: 5,),
-                  CustomText(text: 'Santos Enoque',),
+                  CustomSelectableText(text: 'Santos Enoque',),
                   IconButton(
                     icon: Icon(Icons.keyboard_arrow_down),
                     onPressed: (){
@@ -97,7 +97,7 @@ class NavigationTabletDesktop extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(2, 2, 8, 2),
                     child: Icon(Icons.print),
                   ),
-                  Text('Print')
+                  SelectableText('Print')
                 ],
               )),
           PopupMenuItem(
@@ -108,7 +108,7 @@ class NavigationTabletDesktop extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(2, 2, 8, 2),
                     child: Icon(Icons.share),
                   ),
-                  Text('Share')
+                  SelectableText('Share')
                 ],
               )),
           PopupMenuItem(
@@ -119,7 +119,7 @@ class NavigationTabletDesktop extends StatelessWidget {
                     padding: const EdgeInsets.fromLTRB(2, 2, 8, 2),
                     child: Icon(Icons.add_circle),
                   ),
-                  Text('Add')
+                  SelectableText('Add')
                 ],
               )),
         ]);

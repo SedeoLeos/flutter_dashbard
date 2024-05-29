@@ -1,5 +1,5 @@
-import 'package:admin_panel_responsive_flutter/constants.dart';
-import 'package:admin_panel_responsive_flutter/responsive_layout.dart';
+import 'package:slaega_dashboard_panel/constants.dart';
+import 'package:slaega_dashboard_panel/responsive_layout.dart';
 import 'package:flutter/material.dart';
 
 class ButtonsInfo {

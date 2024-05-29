@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_web_example/helpers/style.dart';
+import 'package:slaega_dating/helpers/style.dart';
 
 class MobileMenu extends StatelessWidget {
-  const MobileMenu({ Key key }) : super(key: key);
+  const MobileMenu({ super.key });
 
  @override
   Widget build(BuildContext context) {
@@ -18,24 +18,24 @@ class MobileMenu extends StatelessWidget {
 
               InkWell(
                 onTap: () {},
-                child: Text(
+                child: const Text(
                   'Pricing',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 5.0, bottom: 5.0),
+              const Padding(
+                padding: EdgeInsets.only(top: 5.0, bottom: 5.0),
                 child: Divider(
                 ),
               ),
               InkWell(
                 onTap: () {},
-                child: Text(
+                child: const Text(
                   'Login',
                   style: TextStyle(color: Colors.white, fontSize: 22),
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Align(
                   alignment: Alignment.bottomCenter,
                   child: Text(

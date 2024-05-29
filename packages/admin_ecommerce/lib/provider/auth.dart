@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:ecommerce_admin_tut/helpers/costants.dart';
-import 'package:ecommerce_admin_tut/models/user.dart';
-import 'package:ecommerce_admin_tut/services/user.dart';
+import 'package:slaega_admin_ecommerce/helpers/costants.dart';
+import 'package:slaega_admin_ecommerce/models/user.dart';
+import 'package:slaega_admin_ecommerce/services/user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -11,10 +11,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 enum Status { Uninitialized, Authenticated, Authenticating, Unauthenticated }
 
 class AuthProvider with ChangeNotifier {
-  User _user;
+  late User _user;
   Status _status = Status.Uninitialized;
   UserServices _userServices = UserServices();
-  UserModel _userModel;
+  late UserModel _userModel;
 
 //  getter
   UserModel get userModel => _userModel;
@@ -34,7 +34,7 @@ class AuthProvider with ChangeNotifier {
 
   _fireSetUp() async {
     await initialization.then((value) {
-      auth.authStateChanges().listen(_onStateChanged);
+      auth.authStateChanges().listen(_onStateChanged as void Function(User? event)?);
     });
   }
 
@@ -48,7 +48,7 @@ class AuthProvider with ChangeNotifier {
           .signInWithEmailAndPassword(
               email: email.text.trim(), password: password.text.trim())
           .then((value) async {
-        await prefs.setString("id", value.user.uid);
+        await prefs.setString("id", value.user!.uid);
       });
       return true;
     } catch (e) {
@@ -68,9 +68,9 @@ class AuthProvider with ChangeNotifier {
               email: email.text.trim(), password: password.text.trim())
           .then((result) async {
         SharedPreferences prefs = await SharedPreferences.getInstance();
-        await prefs.setString("id", result.user.uid);
+        await prefs.setString("id", result.user!.uid);
         _userServices.createAdmin(
-          id: result.user.uid,
+          id: result.user!.uid,
           name: name.text.trim(),
           email: email.text.trim(),
         );
@@ -122,7 +122,7 @@ class AuthProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  String validateEmail(String value) {
+  String? validateEmail(String value) {
     value = value.trim();
 
     if (email.text != null) {

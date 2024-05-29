@@ -73,7 +73,7 @@ class PieChart2State extends State {
                           ),
                         ),
                         Container(
-                          child: Text('Monday'),
+                          child: SelectableText('Monday'),
                         ),
                       ],
                     ),
@@ -95,7 +95,7 @@ class PieChart2State extends State {
                           ),
                         ),
                         Container(
-                          child: Text('Tuesday'),
+                          child: SelectableText('Tuesday'),
                         ),
                       ],
                     ),
@@ -117,7 +117,7 @@ class PieChart2State extends State {
                           ),
                         ),
                         Container(
-                          child: Text('Wednesday'),
+                          child: SelectableText('Wednesday'),
                         ),
                       ],
                     ),
@@ -139,7 +139,7 @@ class PieChart2State extends State {
                           ),
                         ),
                         Container(
-                          child: Text('Thursday'),
+                          child: SelectableText('Thursday'),
                         ),
                       ],
                     ),
@@ -161,7 +161,7 @@ class PieChart2State extends State {
                           ),
                         ),
                         Container(
-                          child: Text('Friday'),
+                          child: SelectableText('Friday'),
                         ),
                       ],
                     ),
@@ -183,7 +183,7 @@ class PieChart2State extends State {
                           ),
                         ),
                         Container(
-                          child: Text('Saturday'),
+                          child: SelectableText('Saturday'),
                         ),
                       ],
                     ),
@@ -205,7 +205,7 @@ class PieChart2State extends State {
                           ),
                         ),
                         Container(
-                          child: Text('Sunday'),
+                          child: SelectableText('Sunday'),
                         ),
                       ],
                     ),
